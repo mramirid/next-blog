@@ -1,27 +1,13 @@
-# NextJS Typescript Boilerplate
+# Next Events App
 
-Bootstrap a developer-friendly NextJS app configured with:
+A simple web app to find events such as conferences or competitions
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+<br />
 
-## Deploy your own
+<p align="center">
+  <img src="https://i.ibb.co/fkVL4r8/Web-capture-1-4-2021-203239-localhost.jpg" alt="Web-capture-1-4-2021-203239-localhost" width="500" border="0">
+</p>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest&project-name=with-typescript-eslint-jest&repository-name=with-typescript-eslint-jest)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+<p align="center">
+  <img src="https://i.ibb.co/m8yrMmX/Web-capture-1-4-2021-203212-localhost.jpg" alt="Web-capture-1-4-2021-203212-localhost" width="500" border="0">
+</p>

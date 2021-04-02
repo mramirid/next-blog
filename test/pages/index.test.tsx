@@ -1,17 +1,10 @@
-import React from 'react'
-import { render, fireEvent } from '../testUtils'
-import { Home } from '../../pages/index'
+import { render } from '@testing-library/react'
 
-describe('Home page', () => {
-  it('matches snapshot', () => {
-    const { asFragment } = render(<Home />, {})
+import HomePage from '../../pages/index'
+
+describe('Home Page', () => {
+  it('Matches snapshot', async () => {
+    const { asFragment } = render(<HomePage />, {})
     expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('clicking button triggers alert', () => {
-    const { getByText } = render(<Home />, {})
-    window.alert = jest.fn()
-    fireEvent.click(getByText('Test Button'))
-    expect(window.alert).toHaveBeenCalledWith('With typescript and Jest')
   })
 })
