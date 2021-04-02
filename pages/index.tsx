@@ -1,8 +1,10 @@
 import { FC } from 'react'
 
+import Hero from '../components/homepage/hero'
+
 const HomePage: FC = () => (
   <>
-    <h1>Hello World</h1>
+    <Hero />
   </>
 )
 
