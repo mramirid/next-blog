@@ -1,0 +1,9 @@
+import { FC } from 'react'
+
+const PostDetailPage: FC = () => (
+  <>
+    <h1>Hello World</h1>
+  </>
+)
+
+export default PostDetailPage
