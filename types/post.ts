@@ -1,8 +1,12 @@
-export default interface Post {
-  slug: string
+export interface PostMetadata {
   title: string
+  date: string
   imageName: string
-  exceprt: string
+  excerpt: string
+  isFeatured: boolean
+}
+
+export default interface Post extends PostMetadata {
+  slug: string
   content: string
-  timestamp: number
 }

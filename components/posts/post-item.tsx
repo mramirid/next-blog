@@ -10,7 +10,7 @@ interface PostsItemProps {
 }
 
 const PostsItem: FC<PostsItemProps> = ({ post }) => {
-  const formattedDate = new Date(post.timestamp).toLocaleDateString('en-US', {
+  const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -32,7 +32,7 @@ const PostsItem: FC<PostsItemProps> = ({ post }) => {
           <div className={classes.content}>
             <h3>{post.title}</h3>
             <time>{formattedDate}</time>
-            <p>{post.exceprt}</p>
+            <p>{post.excerpt}</p>
           </div>
         </a>
       </Link>
