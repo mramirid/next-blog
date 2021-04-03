@@ -1,9 +1,8 @@
 import { FC } from 'react'
 
-const AllPostsPage: FC = () => (
-  <>
-    <h1>Hello World</h1>
-  </>
-)
+import AllPosts from '../../components/posts/all-posts'
+import dummyPosts from '../../data/dummies/posts'
+
+const AllPostsPage: FC = () => <AllPosts posts={dummyPosts} />
 
 export default AllPostsPage
