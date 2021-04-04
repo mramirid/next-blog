@@ -1,6 +1,7 @@
 import { ParsedUrlQuery } from 'querystring'
 
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
 import { FC } from 'react'
 
 import PostContent from '../../components/posts/post-detail/post-content'
@@ -12,7 +13,13 @@ interface PostDetailPageProps {
 }
 
 const PostDetailPage: FC<PostDetailPageProps> = ({ post }) => (
-  <PostContent post={post} />
+  <>
+    <Head>
+      <title>{post.title}</title>
+      <meta name="description" content={post.excerpt} />
+    </Head>
+    <PostContent post={post} />
+  </>
 )
 
 interface PostDetailPageParams extends ParsedUrlQuery {
