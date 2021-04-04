@@ -4,7 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { FC } from 'react'
 
 import PostContent from '../../components/posts/post-detail/post-content'
-import { getPostData, getPostFileNames } from '../../lib/posts-util'
+import { getPostData, getPostFileNames } from '../../lib/posts-data'
 import Post from '../../types/post'
 
 interface PostDetailPageProps {

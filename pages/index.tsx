@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 import FeaturedPosts from '../components/homepage/featured-posts'
 import Hero from '../components/homepage/hero'
-import { getFeaturedPosts } from '../lib/posts-util'
+import { getFeaturedPosts } from '../lib/posts-data'
 import Post from '../types/post'
 
 interface HomePageProps {

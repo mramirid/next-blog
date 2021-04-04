@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { FC } from 'react'
 
 import AllPosts from '../../components/posts/all-posts'
-import { getAllPosts } from '../../lib/posts-util'
+import { getAllPosts } from '../../lib/posts-data'
 import Post from '../../types/post'
 
 interface AllPostsPageProps {

@@ -1,9 +1,7 @@
 import { FC } from 'react'
 
-const ContactPage: FC = () => (
-  <>
-    <h1>Hello World</h1>
-  </>
-)
+import ContactForm from '../components/contact/contact-form'
+
+const ContactPage: FC = () => <ContactForm />
 
 export default ContactPage
