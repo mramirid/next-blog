@@ -1,23 +1,53 @@
 import { ErrorMessage } from '@hookform/error-message'
-import { FC, useCallback } from 'react'
+import { FC, useCallback, useContext } from 'react'
 import { useForm } from 'react-hook-form'
-import { isEmailValid } from '../../lib/validations'
 
+import { NotificationContext } from '../../contexts/notification'
+import { isEmailValid } from '../../lib/validations'
+import { MessageData } from '../../types/message'
 import classes from './contact-form.module.css'
 
-interface FormValues {
-  email: string
-  name: string
-  message: string
-}
-
 const ContactForm: FC = () => {
-  const { handleSubmit, register, errors } = useForm<FormValues>()
+  const notificationCtx = useContext(NotificationContext)
 
-  const onSubmit = useCallback((data: FormValues) => {
-    // eslint-disable-next-line no-console
-    console.log(data)
-  }, [])
+  const { handleSubmit, register, reset, errors } = useForm<MessageData>()
+
+  const onSubmit = useCallback(
+    async (data: MessageData) => {
+      notificationCtx.showNotification({
+        title: 'Please Wait',
+        message: 'Your message is on its way...',
+        status: 'pending',
+      })
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        })
+        const resData = await res.json()
+
+        if (!res.ok) {
+          throw new Error(resData.message)
+        }
+
+        reset()
+        notificationCtx.showNotification({
+          title: 'Success!',
+          message: resData.message,
+          status: 'success',
+        })
+      } catch (error) {
+        notificationCtx.showNotification({
+          title: 'Failed!',
+          message: error.message,
+          status: 'error',
+        })
+      }
+    },
+    [notificationCtx, reset]
+  )
 
   return (
     <section className={classes.contact}>

@@ -4,6 +4,7 @@ import { FC } from 'react'
 
 import '../globals.css'
 import Layout from '../components/layout/layout'
+import { NotificationContextProvider } from '../contexts/notification'
 
 const App: FC<AppProps> = ({ Component, pageProps }) => (
   <>
@@ -15,9 +16,11 @@ const App: FC<AppProps> = ({ Component, pageProps }) => (
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <NotificationContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </NotificationContextProvider>
   </>
 )
 
