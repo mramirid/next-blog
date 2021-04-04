@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <div id="overlays" />
+          <div id="notification" />
         </body>
       </Html>
     )

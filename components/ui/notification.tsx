@@ -1,4 +1,5 @@
 import { FC, useContext } from 'react'
+import ReactDOM from 'react-dom'
 import { NotificationContext } from '../../contexts/notification'
 
 import INotification from '../../types/notification'
@@ -20,14 +21,15 @@ const Notification: FC<INotification> = (props) => {
       break
   }
 
-  return (
+  return ReactDOM.createPortal(
     <div
       className={`${classes.notification} ${statusClasses}`}
       onClick={notificationCtx.hideNotification}
     >
       <h2>{props.title}</h2>
       <p>{props.message}</p>
-    </div>
+    </div>,
+    document.getElementById('notification')!
   )
 }
 
