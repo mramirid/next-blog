@@ -1,7 +1,7 @@
 import { NextApiHandler } from 'next'
 
 import MongoDBConnection from '../../lib/mongodb-connection'
-import withServerErrorHandler from '../../hoc/with-server-error-handler'
+import withServerErrorHandler from '../../lib/server-error-handler'
 import { isEmailValid } from '../../lib/validations'
 import Message, { MessageData } from '../../types/message'
 
